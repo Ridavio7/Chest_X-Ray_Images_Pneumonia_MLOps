@@ -1,0 +1,11 @@
+services:
+
+  medical-cnn:
+
+    build: .
+
+    container_name: medical-cnn
+
+    volumes:
+      - ./outputs:/app/outputs
+      - ./mlruns:/app/mlruns
