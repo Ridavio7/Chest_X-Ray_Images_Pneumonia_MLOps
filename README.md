@@ -644,6 +644,12 @@ best_model.pth
 - размер обучаемой модели;
 - время выполнения эпохи.
 
+Получение данных мониторинга:
+
+```bash
+python -m src.monitoring.system_monitor
+```
+
 Использование Docker позволяет дополнительно отслеживать:
 
 - состояние контейнеров;
@@ -671,6 +677,12 @@ Grad-CAM позволяет визуализировать области изо
 
 ```text
 src/explainability/gradcam.py
+```
+
+Запуск Grad-CAM для конкретного изображения:
+
+```bash
+python -m src.explainability.gradcam data/chest_xray/test/PNEUMONIA/person1_virus_6.jpeg
 ```
 
 ---
@@ -732,6 +744,12 @@ python -m src.training.train
 
 ```bash
 python -m src.automl.optuna_search
+```
+
+Предсказание:
+
+```bash
+python -m src.inference.predict .\data\chest_xray\test\NORMAL\IM-0003-0001.jpeg
 ```
 
 ---
